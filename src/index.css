@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS para centrar todo el contenido dentro del body */
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* background-color: #f0f0f0; */
+  background-color: #222222;
+  color-scheme: light dark;
+  unicode-bidi: isolate;
+  /* Fondo gris claro para mejor visualización */
+}
+
+/* Contenedor principal para controlar el ancho máximo */
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  /* Ajusta este valor según sea necesario */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container-carousel {
+  width: 100%;
+  user-select: none;
+  background-color: black;
+}
+
+.img-carousel {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 500/321;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  opacity: 0.5;
+  user-drag: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
