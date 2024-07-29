@@ -1,27 +1,21 @@
-import { useEffect, useState } from 'react'
-import { VideoList } from './VideoList'
-import { getPlaylistVideos, PLAYLIST_ID } from '../hooks/api'
+// src/components/YouTubePlaylist.jsx
+import React from 'react'
+import useFetch from '../hooks/useFetch'
+import VideoList from './VideoList'
 
-export const YoutubePlaylist = () => {
-  const [videos, setVideos] = useState([])
-
-  useEffect(() => {
-    const fetchVideos = async () => {
-      try {
-        const videos = await getPlaylistVideos(PLAYLIST_ID)
-        const sortedVideos = videos.sort((a, b) => new Date(b.snippet.publishedAt) - new Date(a.snippet.publishedAt))
-        setVideos(sortedVideos)
-      } catch (error) {
-        console.log('error', error)
-      }
-    }
-    fetchVideos()
-  }, [])
-  console.log(videos)
+const YouTubePlaylist = () => {
+  const playlistId = 'PLNF8K9Ddz0kJWl_ftRAo0aNJCSZlQVkRd'
+  const { videos, error } = useFetch({ playlistId })
   return (
     <div>
-      <h1>BLACKPINK HOUSE Playlist</h1>
-      <VideoList videos={videos} />
+      <div className='flex mt-8 justify-between items-center'>
+        <h1 className='text-left text-lg font-semibold '>YouTube Playlist</h1>
+        <span className=' opacity-50 text-xs'>más</span>
+      </div>
+      {error ? <p>Error: {error}</p> : <VideoList videos={videos} />}
     </div>
+
   )
 }
+
+export default YouTubePlaylist
