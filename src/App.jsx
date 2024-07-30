@@ -9,7 +9,7 @@ import ListDiaries from './components/ListDiaries'
 // eslint-disable-next-line space-before-function-paren
 function App() {
   return (
-    <div className='contenedor'>
+    <div className='contenedor fñex flex-col w-screen md:w-[620px] max-[620px] p-5 box-border'>
       <NavBar />
       <MyCarousel />
       <Notices />
@@ -22,3 +22,12 @@ function App() {
 }
 
 export default App
+// .contenedor {
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   max-width: 620px;
+//   /* Ajusta este valor según sea necesario */
+//   padding: 20px;
+//   box-sizing: border-box;
+// }

@@ -19,6 +19,7 @@ body {
   color: var(--text-color);
   display: flex;
   justify-content: center;
+  ;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -31,16 +32,7 @@ body {
 }
 
 /* Contenedor principal para controlar el ancho máximo */
-.contenedor {
-  display: flex;
-  flex-direction: column;
-  max-width: 700px;
-  /* Ajusta este valor según sea necesario */
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: center;
-}
+
 
 .container-carousel {
   width: 100%;
@@ -50,7 +42,7 @@ body {
 
 .img-carousel {
   width: 100%;
-  height: auto;
+  height: 100%;
   aspect-ratio: 500/321;
   object-fit: cover;
   object-position: center top;
@@ -68,6 +60,9 @@ body {
 .contenedor-videos {
   background: rgb(46, 1, 32);
   background: linear-gradient(90deg, rgba(46, 1, 32, 1) 1%, rgba(70, 0, 122, 0.9051995798319328) 100%, rgba(0, 0, 0, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .content-notices {
@@ -77,7 +72,7 @@ body {
   font-weight: 400;
   src: url(https://cdn.jsdelivr.net/fontsource/fonts/zain@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/zain@latest/latin-400-normal.woff) format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-
+  width: 100%;
 }
 
 
@@ -87,3 +82,5 @@ body {
   height: 100%;
 
 }
+
+.channel-content {}

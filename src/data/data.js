@@ -1,11 +1,12 @@
 export const notices = [
   {
+
     title: 'Lisa y Frédéric Arnault captados besándose',
     description: 'Un video de Lisa y su supuesto novio Frédéric Arnault ha causado furor en las redes.',
     date: '2024-06-27',
     source: 'La República',
     link: 'https://larepublica.pe/espectaculos/2024/06/27/lisa-y-frederic-arnault-captados-besandose-video/',
-    image: 'https://onecms-res.cloudinary.com/image/upload/s--kjHXSM9d--/f_auto,q_auto/c_fill,g_auto,h_622,w_830/v1/one-cms/core/blackpink_lisa_frederic_arnault_0.jpg?itok=X2d2x3Fs'
+    image: 'https://mmo.aiircdn.com/766/66352985d632e.jpg'
   },
   {
     title: 'Lisa de BLACKPINK anuncia comeback',

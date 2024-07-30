@@ -8,13 +8,9 @@ const ChannelCard = ({ channelid }) => {
 
   return (
     <div>
-      <div
-        className='channel-content bg-black/10 p-2 rounded-lg'
-      >
-        <img src={channelInfo.snippet.thumbnails.high.url} alt={channelInfo.snippet.title} className='rounded-lg object-cover w-full h-full' />
-        <div className='flex flex-col p-2'>
-          <h2 className='text-sm font-semibold'>{channelInfo.snippet.title}</h2>
-        </div>
+      <div className='bg-black/20 p-2 ml-1 rounded-lg flex flex-col my-1'>
+        <img src={channelInfo.snippet.thumbnails.high.url} alt={channelInfo.snippet.title} className='rounded-lg object-cover' />
+        <h2 className='text-left text-[8px] md:text-sm font-semibold'>{channelInfo.snippet.customUrl}</h2>
       </div>
     </div>
   )

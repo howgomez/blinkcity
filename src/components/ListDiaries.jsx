@@ -3,28 +3,24 @@ import ListCards from './ListCards'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 0 },
-    items: 3
-  }
-}
+const responsive = { desktop: { breakpoint: { max: 3000, min: 0 }, items: 3, partialVisibilityGutter: 10 } }
 
 const ListDiaries = () => {
-  const { videos, error } = useFetch({ playlistId: 'PLNF8K9Ddz0kIUWvF02B4dvUyOgGO9x87D' })
-
-  console.log(videos)
-  console.log(error)
+  const playlistId = 'PLNF8K9Ddz0kIUWvF02B4dvUyOgGO9x87D'
+  const { videos } = useFetch({ playlistId })
 
   return (
     <div>
-      <h1> Diaries</h1>
+      <div className='flex mt-8 justify-between items-center'>
+        <h1 className='text-left text-lg font-semibold '>YouTube Playlist</h1>
+        <span className=' opacity-50 text-xs'>más</span>
+      </div>
       <Carousel
         responsive={responsive}
         partialVisible
       >
         {
-          videos.map(video => (
+          videos.map((video) => (
             <ListCards
               key={video.id}
               title={video.snippet.title}
@@ -33,7 +29,6 @@ const ListDiaries = () => {
             />
           ))
         }
-
       </Carousel>
     </div>
   )
