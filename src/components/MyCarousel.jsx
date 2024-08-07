@@ -4,14 +4,7 @@ import 'react-multi-carousel/lib/styles.css'
 import { trending } from '../data/trending'
 import { CarouselItems } from './CarouselItems'
 
-const responsive = {
-
-  desktop: {
-    breakpoint: { max: 3000, min: 0 },
-    items: 1
-  }
-
-}
+const responsive = { desktop: { breakpoint: { max: 3000, min: 0 }, items: 1 } }
 
 const MyCarousel = () => {
   return (
@@ -36,6 +29,7 @@ const MyCarousel = () => {
           renderArrowsWhenDisabled={false}
           renderButtonGroupOutside={false}
           renderDotsOutside={false}
+          className='z-10'
         >
           {trending.map(item => (
             <CarouselItems key={item.title} {...item} />

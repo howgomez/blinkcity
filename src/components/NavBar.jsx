@@ -1,22 +1,44 @@
-// src/components/NavBar.jsx
-import React from 'react'
-import useDarkMode from '../hooks/useDarkMode'
-import svgLight from '../../public/logo-light.svg'
-import svgDark from '../../public/logo-dark.svg'
-import { TiThMenu } from 'react-icons/ti'
+import React, { useState, useEffect } from 'react'
+import { IoIosCloseCircleOutline } from 'react-icons/io'
+import { AiOutlineMenu } from 'react-icons/ai'
+
+import { menu } from '../data/menu'
+import MenuCard from './MenuCard'
 
 const NavBar = () => {
-  const [theme, toggleTheme] = useDarkMode() // Utilizar el hook
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const toggleMenu = () => setMenuOpen(!menuOpen)
+
+  const buttonOpen = () => (<AiOutlineMenu className=' cursor-pointer size-6' onClick={toggleMenu} />)
+  const buttonClose = () => (<IoIosCloseCircleOutline className='tcursor-pointer size-6' onClick={toggleMenu} />)
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add('menu-open')
+    } else {
+      document.body.classList.remove('menu-open')
+    }
+  }, [menuOpen])
 
   return (
-
-    <nav className='flex items-center justify-between bg-black/20'>
-      <picture onClick={toggleTheme} className='cursor-pointer bg-[#222] rounded-full p-2'>
-        <source srcSet={theme === 'light' ? svgLight : svgDark} type='image/svg+xml' />
-        <img src={theme === 'light' ? svgLight : svgDark} alt='logo' className='size-12' />
-      </picture>
-      <span>LOGO</span>
-      <TiThMenu className='text-white cursor-pointer size-8' />
+    <nav>
+      <div className='flex items-center justify-between bg-black/80 text-white p-2 navbar-buttons z-50'>
+        <span>LOGO</span>
+        <span>{menuOpen ? (buttonClose()) : (buttonOpen())}</span>
+      </div>
+      <div id='scroll-menu' className={`${menuOpen ? '' : 'hidden'}`}>
+        <div className='flex  justify-between text-black font-semibold p-4'>
+          <a href='/'>Home</a>
+          <a href='/news' className='link-center px-12'>Noticias</a>
+          <a href='/channels'>Canales</a>
+        </div>
+        <div className='flex flex-col gap-10'>
+          <MenuCard id={menu[0].artistas} title={menu[0].id} />
+          <MenuCard id={menu[1].entretenimiento} title={menu[1].id} />
+          <MenuCard id={menu[2].eventos} title={menu[2].id} />
+        </div>
+      </div>
     </nav>
   )
 }

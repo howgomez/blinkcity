@@ -1,18 +1,10 @@
-import React from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import voteKids from '../../public/vote-kids.png'
 import voteKids2 from '../../public/vote-kids-2.png'
 import voteVma from '../../public/vote-vma.png'
 
-const responsive = {
-
-  desktop: {
-    breakpoint: { max: 3000, min: 0 },
-    items: 1
-  }
-
-}
+const responsive = { desktop: { breakpoint: { max: 3000, min: 0 }, items: 1 } }
 
 const MyCarousel = () => {
   return (
@@ -37,7 +29,7 @@ const MyCarousel = () => {
           renderArrowsWhenDisabled={false}
           renderButtonGroupOutside={false}
           renderDotsOutside={false}
-          className='call-to-action h-58'
+          className='call-to-action h-58 z-10'
         >
           <div className='bg-red-200 h-full'>
             <img src={voteKids} alt='vote-kids' className='w-full h-full' />

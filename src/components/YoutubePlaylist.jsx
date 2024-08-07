@@ -17,13 +17,14 @@ const YouTubePlaylist = () => {
   return (
     <div className='w-full'>
       <div className='flex mt-8 justify-between items-center'>
-        <h1 className='text-left text-lg font-semibold '>YouTube Playlist</h1>
+        <h1 className='text-left text-lg font-semibold py-4'>Entretenimiento</h1>
         <span className=' opacity-50 text-xs'>más</span>
       </div>
       <div>
         <Carousel
           responsive={responsive}
           partialVisible
+          className='z-10'
 
         >
           {
@@ -33,6 +34,7 @@ const YouTubePlaylist = () => {
                 title={video.snippet.title}
                 image={video.snippet.thumbnails.medium.url}
                 mobileImage={video.snippet.thumbnails.high.url}
+                link={`https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}`}
               />
             ))
           }

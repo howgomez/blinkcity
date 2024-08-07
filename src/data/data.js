@@ -1,6 +1,6 @@
 export const notices = [
   {
-
+    id: 'LISA_Y_FREDERIC_ARNAULT_CAPTADOS_BESANDOSE',
     title: 'Lisa y Frédéric Arnault captados besándose',
     description: 'Un video de Lisa y su supuesto novio Frédéric Arnault ha causado furor en las redes.',
     date: '2024-06-27',
@@ -9,6 +9,7 @@ export const notices = [
     image: 'https://mmo.aiircdn.com/766/66352985d632e.jpg'
   },
   {
+    id: 'LISA_DE_BLACKPINK_ANUNCIA_COMEBACK',
     title: 'Lisa de BLACKPINK anuncia comeback',
     description: 'Lisa sorprendió a sus fans con el anuncio de su regreso musical a través de TikTok.',
     date: '2024-06-06',
@@ -17,6 +18,7 @@ export const notices = [
     image: 'https://imgmedia.larepublica.pe/640x371/larepublica/original/2024/06/06/6661f1036c417e61934398c6.webp'
   },
   {
+    id: 'ROSE_ALARMA_A_SUS_SEGUIDORES',
     title: 'Rosé alarma a sus seguidores',
     description: 'La apariencia de Rosé en su última aparición pública ha preocupado a sus fans.',
     date: '2024-06-06',

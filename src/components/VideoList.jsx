@@ -17,6 +17,8 @@ const VideoList = ({ videos }) => {
       <Carousel
         responsive={responsive}
         partialVisible
+        className='z-10'
+
       >
         {videos.map((video) => (
           <div key={video.snippet.resourceId.videoId} className=' flex flex-col my-8 p-1'>
