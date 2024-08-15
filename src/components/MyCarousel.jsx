@@ -1,4 +1,3 @@
-import React from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import { trending } from '../data/trending'
@@ -8,7 +7,7 @@ const responsive = { desktop: { breakpoint: { max: 3000, min: 0 }, items: 1 } }
 
 const MyCarousel = () => {
   return (
-    <div className=' w-full bg-black'>
+    <div className='w-full bg-black'>
       <div className='container-carousel'>
         <Carousel
           responsive={responsive}
@@ -17,12 +16,9 @@ const MyCarousel = () => {
           autoPlay
           autoPlaySpeed={4000}
           centerMode={false}
-          containerClass='container-with-dots'
-          dotListClass=''
           draggable
           focusOnSelect={false}
           infinite
-          itemClass=''
           keyBoardControl
           minimumTouchDrag={80}
           pauseOnHover

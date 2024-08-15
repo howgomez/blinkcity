@@ -1,7 +1,7 @@
 import { useMediaQuery } from '@uidotdev/usehooks'
 
 const ListCards = ({ title, image, mobileImage, link }) => {
-  const isMobile = useMediaQuery('(min-width: 768px)')
+  const isMobile = useMediaQuery('(min-width: 540px)')
   return (
     <a href={link} target='_blank' rel='noreferrer'>
       <div className='flex pr-1'>

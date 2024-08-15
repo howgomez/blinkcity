@@ -15,17 +15,16 @@ const YouTubePlaylist = () => {
     }
   }
   return (
-    <div className='w-full'>
-      <div className='flex mt-8 justify-between items-center'>
+    <div>
+      <div className='flex mt-2 justify-between items-center'>
         <h1 className='text-left text-lg font-semibold py-4'>Entretenimiento</h1>
-        <span className=' opacity-50 text-xs'>más</span>
+        <span className='opacity-50 text-xs'>más</span>
       </div>
       <div>
         <Carousel
           responsive={responsive}
           partialVisible
           className='z-10'
-
         >
           {
             videos.map((video) => (

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const YOUTUBE_API_KEY = 'AIzaSyAqieY8-WBX7nSzJ-r65mh8kr51huOzaiQ'
+const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY
 
 const useFetch = ({ playlistId }) => {
   const [videos, setVideos] = useState([])

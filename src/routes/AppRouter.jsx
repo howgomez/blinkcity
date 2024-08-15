@@ -9,6 +9,8 @@ import YoutubePlaylist from '../components/YoutubePlaylist'
 import CallToAction from '../components/CallToAction'
 import ListDiaries from '../components/ListDiaries'
 import { useEffect } from 'react'
+import Footer from '../components/Footer'
+import MembersPage from '../page/MembersPage'
 const AppRouter = () => {
   return (
     <>
@@ -18,6 +20,7 @@ const AppRouter = () => {
           <Route path='/news/:id' element={<NoticesPage />} />
         </Route>
         <Route path='/channels/:id' element={<ChannelDetails />} />
+        <Route path='/artistas/:id' element={<MembersPage />} />
       </Routes>
     </>
   )
@@ -30,7 +33,7 @@ const HomePage = () => {
   }, [])
   return (
     <div>
-      <div className=' sticky top-0 left-0 right-0 z-50 w-full'>
+      <div className='sticky top-0 left-0 right-0 z-50'>
         <NavBar />
       </div>
       <MyCarousel />
@@ -39,6 +42,7 @@ const HomePage = () => {
       <Channels />
       <CallToAction />
       <ListDiaries />
+      <Footer />
     </div>
   )
 }

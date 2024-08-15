@@ -17,12 +17,9 @@ const MyCarousel = () => {
           autoPlay
           autoPlaySpeed={4000}
           centerMode={false}
-          containerClass='container-with-dots'
-          dotListClass=''
           draggable
           focusOnSelect={false}
           infinite
-          itemClass=''
           keyBoardControl
           minimumTouchDrag={80}
           pauseOnHover
