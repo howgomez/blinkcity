@@ -1,4 +1,3 @@
-// src/hooks/useDarkMode.js
 import { useState, useEffect } from 'react'
 
 const useDarkMode = () => {
@@ -9,9 +8,7 @@ const useDarkMode = () => {
     root.setAttribute('data-theme', theme)
   }, [theme])
 
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'))
-  }
+  const toggleTheme = () => setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'))
 
   return [theme, toggleTheme]
 }

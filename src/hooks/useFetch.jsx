@@ -15,7 +15,6 @@ const useFetch = ({ playlistId }) => {
         }
         const data = await response.json()
         setVideos(data.items)
-        console.log(data.items)
       } catch (error) {
         setError(error.message)
         console.error('Error fetching playlist from YouTube API', error)

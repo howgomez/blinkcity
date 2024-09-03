@@ -4,7 +4,6 @@ import MyCarousel from '../components/MyCarousel'
 import { Notices } from '../components/Notices'
 import Channels from '../components/Channels'
 import NoticesPage from '../page/NoticesPage'
-import ChannelDetails from '../page/ChannelDetails'
 import YoutubePlaylist from '../components/YoutubePlaylist'
 import CallToAction from '../components/CallToAction'
 import ListDiaries from '../components/ListDiaries'
@@ -19,9 +18,9 @@ const AppRouter = () => {
         <Route path='/news' element={<NoticesPage />}>
           <Route path='/news/:id' element={<NoticesPage />} />
         </Route>
-        <Route path='/channels/:id' element={<ChannelDetails />} />
         <Route path='/artistas/:id' element={<MembersPage />} />
       </Routes>
+      <Footer />
     </>
   )
 }
@@ -42,7 +41,7 @@ const HomePage = () => {
       <Channels />
       <CallToAction />
       <ListDiaries />
-      <Footer />
+
     </div>
   )
 }

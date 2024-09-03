@@ -1,43 +1,32 @@
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css'
-import voteKids from '../../public/vote-kids.png'
-import voteKids2 from '../../public/vote-kids-2.png'
-import voteVma from '../../public/vote-vma.png'
+import { VOTE_STATUS } from '../data/vote'
 
-const responsive = { desktop: { breakpoint: { max: 3000, min: 0 }, items: 1 } }
+const categories = VOTE_STATUS.map(vote => vote.categoria)
 
 const MyCarousel = () => {
   return (
     <div className='mt-10'>
-      <div>
-        <Carousel
-          responsive={responsive}
-          additionalTransfrom={0}
-          arrows
-          autoPlay
-          autoPlaySpeed={4000}
-          centerMode={false}
-          draggable
-          focusOnSelect={false}
-          infinite
-          keyBoardControl
-          minimumTouchDrag={80}
-          pauseOnHover
-          renderArrowsWhenDisabled={false}
-          renderButtonGroupOutside={false}
-          renderDotsOutside={false}
-          className='call-to-action h-58 z-10'
-        >
-          <div className='bg-red-200 h-full'>
-            <img src={voteKids} alt='vote-kids' className='w-full h-full' />
+      <div className='relative'>
+        {
+          VOTE_STATUS.map(vote => (
+            <div className='bg-black h-full' key={vote.id}>
+              <img src={vote.image} alt='vote-kids' className='w-full h-full opacity-75' />
+            </div>
+          ))
+        }
+        <div className='text-sm'>
+          <span className='text-white absolute top-0 text-md xl:text-xl p-2 bg-pink-300'>VOTE FOR LISA ON VMAs</span>
+          <div className='absolute top-0 right-0'>
+            {
+              categories[0]?.map((category) => (
+                <div className='mb-3 mt-2' key={category.name}>
+                  <a href={category.url} target='_blank' className='bg-green-200 rounded-xl p-1 text-xs xl:text-sm' rel='noreferrer'>
+                    {category.name}
+                  </a>
+                </div>
+              ))
+            }
           </div>
-          <div className='bg-black h-full'>
-            <img src={voteKids2} alt='vote-kids' className='w-full h-full' />
-          </div>
-          <div className='bg-green-200 h-full'>
-            <img src={voteVma} alt='vote-vma' className='w-full' />
-          </div>
-        </Carousel>
+        </div>
       </div>
     </div>
   )

@@ -17,7 +17,7 @@ export const notices = [
   {
     id: 'BLACKPINK_STAGE_ANIVERSARIO',
     title: 'BLACKPINK ya orgzaniza su fan metting con un increible escenario',
-    description: 'La apariencia de Rosé en su última aparición pública ha preocupado a sus fans.',
+    description: 'El escenario ya está listo para recibir a sus protagonistas y fans.',
     date: '2024-08-08',
     image: 'https://pbs.twimg.com/media/GUbpZATXUAAXQO2?format=jpg&name=large'
   }

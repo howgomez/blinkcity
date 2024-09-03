@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { menu } from '../data/menu'
 const MenuCard = () => {
   return (
-    <div className='flex flex-col animate__backInUp'>
+    <div className='flex flex-col animate__backInUp h-screen'>
       <div>
         <ul className='flex flex-col gap-3 text-sm mt-2 font-semibold'>
           {
@@ -48,7 +48,6 @@ const MenuCard = () => {
               </div>
             ))
           }
-
         </ul>
       </div>
     </div>

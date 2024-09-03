@@ -12,7 +12,7 @@ const NavPage = ({ section }) => {
       <Link to='/'>
         <IoIosArrowBack className='text-2xl' />
       </Link>
-      <span className='text-black'>{section}</span>
+      <span>{section}</span>
     </nav>
   )
 }
